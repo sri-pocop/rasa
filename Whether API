@@ -1,0 +1,6 @@
+
+Format for sending request:
+http://api.weatherstack.com/current?access_key=20595d6666076cf9ed7f130638c403615e&query=Italy
+
+Sample Response:
+{"request":{"type":"City","query":"Americana, Brazil","language":"en","unit":"m"},"location":{"name":"Americana","country":"Brazil","region":"Sao Paulo","lat":"-22.740","lon":"-47.334","timezone_id":"America\/Sao_Paulo","localtime":"2019-11-21 15:21","localtime_epoch":1574349660,"utc_offset":"-3.0"},"current":{"observation_time":"06:21 PM","temperature":31,"weather_code":116,"weather_icons":["https:\/\/assets.weatherstack.com\/images\/wsymbols01_png_64\/wsymbol_0002_sunny_intervals.png"],"weather_descriptions":["Partly cloudy"],"wind_speed":7,"wind_degree":100,"wind_dir":"E","pressure":1014,"precip":0,"humidity":36,"cloudcover":75,"feelslike":31,"uv_index":8,"visibility":10,"is_day":"yes"}}

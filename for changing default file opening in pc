@@ -1,0 +1,14 @@
+in Command prompt, type : regedit
+
+    give yes in dialog box
+
+then go to this path:
+
+  * Computer\HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\FileExts\
+
+then select particular file extention
+
+  * delete 'userChoice' folder
+  * and delete all files expect 'default' under 'OpenWithList' folder
+
+file will be set to default or empty type after system restart.

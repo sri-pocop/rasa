@@ -2,8 +2,6 @@ Sub select_result()
 '
 ' select_result Macro
 '
-
-'
     Range("H1").Select
     Range(Selection, Selection.End(xlDown)).Select
     Range(Selection, Selection.End(xlToRight)).Select

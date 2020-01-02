@@ -1,7 +1,5 @@
 Sub select_result()
-'
-' select_result Macro
-'
+
     Range("H1").Select
     Range(Selection, Selection.End(xlDown)).Select
     Range(Selection, Selection.End(xlToRight)).Select
@@ -94,6 +92,7 @@ Call NameSplit
 Call SlashSplit
 Call set_col_number
 Call date_set
+Call Auto_fit
 Call select_result
 'Call delete_col
 End Sub
@@ -106,8 +105,16 @@ End Sub
 Sub delete_col()
     Selection.Delete Shift:=xlToLeft
 End Sub
+Sub Auto_fit()
 
+    Columns("I:I").EntireColumn.AutoFit
+    Columns("H:H").EntireColumn.AutoFit
+    Columns("M:M").EntireColumn.AutoFit
+    Columns("L:L").EntireColumn.AutoFit
+End Sub
 
 Private Sub CommandButton1_Click()
 Call main_macro
 End Sub
+
+

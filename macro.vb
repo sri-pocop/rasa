@@ -1,6 +1,6 @@
 Sub select_result()
 
-    Range("H1").Select
+    Range("H2").Select
     Range(Selection, Selection.End(xlDown)).Select
     Range(Selection, Selection.End(xlToRight)).Select
 End Sub
@@ -12,7 +12,7 @@ Dim i As Integer
 Dim FullName As Variant
 Dim x As String, cell As Range
 
-For Each cell In ActiveSheet.Range("A1:A20")
+For Each cell In ActiveSheet.Range("A2:A50")
      txt = cell.Value
 
      FullName = Split(txt, " ")
@@ -41,7 +41,7 @@ Dim i As Integer
 Dim FullName As Variant
 Dim x As String, cell As Range
 
-For Each cell In ActiveSheet.Range("B1:B20")
+For Each cell In ActiveSheet.Range("B2:B50")
      txt_for_slash = cell.Value
      
      FullName_slash = Split(txt_for_slash, "\")
@@ -64,7 +64,7 @@ End Sub
 Sub RemoveSpaces_3()
 'Remove multiple spaces from a range
 Dim r1 As Range
-Set r1 = ActiveSheet.Range("A1:A20") 'change this line to match your range
+Set r1 = ActiveSheet.Range("A2:A50") 'change this line to match your range
 r1.Replace _
       What:=Space(2), _
       Replacement:=" ", _
@@ -76,7 +76,7 @@ If Not r1 Is Nothing Then
 End If
 End Sub
 Sub date_set()
-    For Each cell In ActiveSheet.Range("H1:H20")
+    For Each cell In ActiveSheet.Range("H2:H50")
      Content = cell.Value
      If Content <> "" Then
         first = Mid(Content, 5, 2)
@@ -112,9 +112,21 @@ Sub Auto_fit()
     Columns("M:M").EntireColumn.AutoFit
     Columns("L:L").EntireColumn.AutoFit
 End Sub
+Sub delete_selected()
+    Range("A2:N2").Select
+    Range(Selection, Selection.End(xlDown)).Select
+    Selection.ClearContents
+End Sub
+Sub select_cell()
+    Range("A2").Select
+End Sub
 
 Private Sub CommandButton1_Click()
 Call main_macro
 End Sub
 
 
+Private Sub CommandButton2_Click()
+Call delete_selected
+Call select_cell
+End Sub
